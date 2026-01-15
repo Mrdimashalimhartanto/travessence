@@ -20,8 +20,8 @@ class _MyAppState extends State<MyApp> {
       routes: {
         "/": (context) => const SplashPage(),
         "/welcome-page": (context) => const WelcomePage(),
-        "/discover-page": (context) => const DiscoveryPage(),
         "/main-page": (context) => const MainPage(),
+        "/cart-page": (context) => const CartPage(),
       },
     );
   }

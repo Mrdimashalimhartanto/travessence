@@ -10,35 +10,37 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(
-      const Duration(seconds: 5),
-      () => Navigator.pushNamed(context, '/welcome-page'),
-    );
     super.initState();
+    _checkConnection();
+  }
+
+  Future<void> _checkConnection() async {
+    await Future.delayed(const Duration(seconds: 2)); // simulasi loading
+
+    bool isConnected = true; // ganti dengan logic cek internet
+
+    if (isConnected && mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const WelcomePage()),
+      );
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: travessence,
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Column(
-              children: [
-                Image.asset(
-                  'assets/logo_travenssence.png',
-                  width: 300,
-                  height: 300,
-                ),
-                const SizedBox(height: 20),
-              ],
+            Image.asset(
+              'assets/logo_travenssence.png',
+              width: 300,
+              height: 300,
             ),
-            // buatkan progress indicator loading di bawah logo, jika jaringan nya bagus maka lanjut ke welcome page tapi jika jaringan kurang bagus maka munculkan loading terus
+            const SizedBox(height: 30),
           ],
         ),
       ),

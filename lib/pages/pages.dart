@@ -9,7 +9,6 @@ import 'package:travessence/utils/theme.dart';
 
 part 'splash_page.dart';
 part 'welcome_page.dart';
-part 'discovery_page.dart';
 part 'main_page.dart';
 part 'home_page.dart';
 part 'chat_page.dart';
