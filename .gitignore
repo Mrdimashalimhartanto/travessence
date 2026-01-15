@@ -1,0 +1,19 @@
+# Flutter
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+build/
+flutter_export_environment.sh
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/engine/
+ios/Flutter/flutter_assets/
+
+# macOS
+macos/Pods/
+macos/Flutter/ephemeral/
