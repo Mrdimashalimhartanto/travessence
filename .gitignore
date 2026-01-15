@@ -1,19 +1,53 @@
-# Flutter
+# ===== System =====
+.DS_Store
+*.log
+
+# ===== Flutter/Dart =====
 .dart_tool/
 .packages
 .pub/
 .pub-cache/
 build/
-flutter_export_environment.sh
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
 
-# iOS
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+
+# ===== iOS =====
 ios/Pods/
 ios/.symlinks/
 ios/Flutter/App.framework
 ios/Flutter/Flutter.framework
 ios/Flutter/engine/
 ios/Flutter/flutter_assets/
+ios/Runner.xcworkspace/
+ios/Runner/GeneratedPluginRegistrant.*
 
-# macOS
+# ===== Android =====
+android/.gradle/
+android/.idea/
+android/build/
+android/app/build/
+android/local.properties
+
+# ===== macOS =====
 macos/Pods/
 macos/Flutter/ephemeral/
+macos/Flutter/Flutter.framework
+macos/Flutter/App.framework
+macos/Flutter/engine/
+
+# ===== Web =====
+web/.dart_tool/
+web/build/
+
+# ===== General =====
+*.lock
+*.keystore
+*.jks
+*.p12
+build/

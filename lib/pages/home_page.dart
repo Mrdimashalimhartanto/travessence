@@ -74,18 +74,11 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ],
               ),
-              // Padding(
-              //   padding: const EdgeInsets.only(bottom: 16.0, right: 24),
-              //   child: Image.asset(
-              //     'assets/logo_nike.png',
-              //     height: 200,
-              //     width: 100,
-              //   ),
-              // ),
             ],
           ),
         ),
@@ -125,6 +118,311 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget travessenceTitleMoreMenu() {
+      return Padding(
+        padding: EdgeInsets.only(top: 30.0, left: 16, right: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Layanan Teratas',
+              style: GoogleFonts.poppins(
+                color: travessence,
+                fontSize: 18,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget menumore() {
+      return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: travessence,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: Image.network(
+                        'https://cdn-icons-png.flaticon.com/512/3127/3127363.png',
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      'Pesawat',
+                      style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        color: travessence,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: travessence,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: Image.network(
+                        'https://cdn-icons-png.flaticon.com/512/3310/3310553.png',
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Hotel',
+                      style: GoogleFonts.poppins(
+                        color: travessence,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () => print('GoFood'),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: travessence,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: 50,
+                        child: Image.network(
+                          'https://cdn-icons-png.flaticon.com/512/2387/2387679.png',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'To Do',
+                      style: GoogleFonts.poppins(
+                        color: travessence,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () => print('GoSend'),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: travessence,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: 50,
+                        child: Image.network(
+                          'https://cdn-icons-png.flaticon.com/512/713/713309.png',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Kereta Api',
+                      style: GoogleFonts.poppins(
+                        color: travessence,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget titlemenu() {
+      return Padding(
+        padding: const EdgeInsets.only(left: 16, right: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Menu Travessence',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    moremenu(context) {
+      showModalBottomSheet(
+        isScrollControlled: true,
+        context: context,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(16.0),
+            topLeft: Radius.circular(16.0),
+          ),
+        ),
+        builder: (BuildContext c) {
+          return Container(
+            height: MediaQuery.of(context).size.height * 0.80,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  travessenceTitleMoreMenu(),
+                  SizedBox(height: 18),
+                  menumore(),
+                  SizedBox(height: 18),
+                  // MenuMore(),
+                  SizedBox(height: 18),
+                  // JudulWisata(),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        // detailmember2(),
+                        // detailmember2(),
+                        // detailmember2(),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 18),
+                  // JudulWisata(),
+                  SizedBox(height: 18),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        // detailmember2(),
+                        // detailmember2(),
+                        // detailmember2(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
+
+    Widget menutravessence() {
+      return Column(
+        children: <Widget>[
+          SizedBox(height: 15),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              TravessenceMenu(
+                title: "Akomodasi",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/9434/9434409.png',
+              ),
+              TravessenceMenu(
+                title: "Atraksi",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
+              ),
+              TravessenceMenu(
+                title: "Villa & Apt",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/3033/3033267.png',
+              ),
+              TravessenceMenu(
+                title: "Event",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/2558/2558944.png',
+              ),
+            ],
+          ),
+          SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              TravessenceMenu(
+                title: "Spa &\n Kecantikan",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/1329/1329088.png',
+              ),
+              TravessenceMenu(
+                title: "Sewa\nMobil",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/5044/5044511.png',
+              ),
+              TravessenceMenu(
+                title: "Tempat\nBermain",
+                image:
+                    'https://cdn-icons-png.flaticon.com/512/10155/10155168.png',
+              ),
+              Column(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {
+                      moremenu(context);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: travessence,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: Image(
+                        height: 10,
+                        width: 10,
+                        image: NetworkImage(
+                          'https://cdn-icons-png.flaticon.com/512/10172/10172145.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'More',
+                    style: GoogleFonts.poppins(
+                      color: travessence,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      );
+    }
+
     Widget kontentmember() {
       return Column(
         children: [
@@ -136,148 +434,83 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
-    Widget categories() {
-      return Container(
-        margin: EdgeInsets.only(
-          top: 12.0,
-          // top: defaultMargin,
-        ),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(width: defaultMargin),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Semua',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
+    Widget buttonlihatpromo() {
+      return Padding(
+        padding: EdgeInsets.only(bottom: 1),
+        child: GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: 40,
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            decoration: BoxDecoration(
+              color: travessence,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Lihat Promo',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Pesawat',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Hotel',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Villa & Apt.',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'To Do',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Kereta Api',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Sewa mobil',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                margin: EdgeInsets.only(right: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: travessence),
-                ),
-                child: Text(
-                  'Jemputan Bandara',
-                  style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
+        ),
+      );
+    }
+
+    Widget categories({
+      required List<String> items,
+      required int selectedIndex,
+      required ValueChanged<int> onTap,
+    }) {
+      return SizedBox(
+        height: 34,
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemCount: items.length,
+          separatorBuilder: (_, __) => const SizedBox(width: 8),
+          itemBuilder: (context, i) {
+            final selected = i == selectedIndex;
+            return InkWell(
+              onTap: () => onTap(i),
+              borderRadius: BorderRadius.circular(18),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
+                ),
+                decoration: BoxDecoration(
+                  color: selected ? const Color(0xFFE6F0FF) : Colors.white,
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(
+                    color: selected
+                        ? const Color(0xFF3A7BFF)
+                        : const Color(0xFFE6E8EF),
+                  ),
+                ),
+                child: Text(
+                  items[i],
+                  style: GoogleFonts.poppins(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: selected
+                        ? const Color(0xFF2563EB)
+                        : const Color(0xFF111827),
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       );
     }
@@ -398,11 +631,14 @@ class _HomePageState extends State<HomePage> {
                                     Divider(thickness: 1),
                                     //  travessence MENU
                                     const SizedBox(height: 10),
-                                    // travessenceMenu(),
+                                    // bisa jadi card member disini
                                   ],
                                 ),
                               ),
                             ),
+                            SizedBox(height: 20),
+                            titlemenu(),
+                            menutravessence(),
                             SizedBox(height: 20),
                             kontentmember(),
                             Divider(
@@ -413,8 +649,31 @@ class _HomePageState extends State<HomePage> {
                             ),
                             SizedBox(height: 20),
                             promotravessence(),
+                            SizedBox(height: 20),
+                            categories(
+                              items: const [
+                                "Semua",
+                                "Pesawat",
+                                "Hotel",
+                                "Villa & Apt",
+                                "To Do",
+                                "Kereta Api",
+                                "Sewa Mobil",
+                                "Jemputan Bandara",
+                              ],
+                              selectedIndex: 0,
+                              onTap: (_) {},
+                            ),
                             SizedBox(height: 10),
-                            categories(),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: promoList.map((promo) {
+                                  return PromoCard(promo: promo);
+                                }).toList(),
+                              ),
+                            ),
+                            buttonlihatpromo(),
                           ],
                         ),
                       ),

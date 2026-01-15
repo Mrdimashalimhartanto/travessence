@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travessence/models/models.dart';
 import 'package:travessence/utils/theme.dart';
+import 'package:travessence/widgets/widgets.dart';
 
 part 'splash_page.dart';
 part 'welcome_page.dart';

@@ -186,7 +186,15 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: cartButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: customBottomNav(),
-      body: body(),
+      body: Padding(
+        padding: EdgeInsets.only(
+          bottom:
+              MediaQuery.of(context).padding.bottom +
+              kBottomNavigationBarHeight +
+              40,
+        ),
+        child: body(),
+      ),
     );
   }
 }
