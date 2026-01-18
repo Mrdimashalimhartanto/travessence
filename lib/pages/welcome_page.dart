@@ -197,10 +197,7 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MainPage()),
-                    );
+                    Navigator.pushNamed(context, '/main-page');
                   },
                   child: Text(
                     'Continue',

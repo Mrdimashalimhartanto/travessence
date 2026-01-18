@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travessence/pages/menu/menu.dart';
 import 'package:travessence/pages/pages.dart';
 
 void main() {
@@ -21,7 +22,15 @@ class _MyAppState extends State<MyApp> {
         "/": (context) => const SplashPage(),
         "/welcome-page": (context) => const WelcomePage(),
         "/main-page": (context) => const MainPage(),
-        "/cart-page": (context) => const CartPage(),
+
+        // Menu Pages
+        '/akomodasi': (context) => const Akomodasi(),
+        '/atraksi': (context) => const Atraksi(),
+        '/villa_apt': (context) => const VillaApt(),
+        '/event': (context) => const Event(),
+        '/spa-kecantikan': (context) => const SpaKecantikan(),
+        '/sewa-mobil': (context) => const SewaMobil(),
+        '/tempat_bermain': (context) => const TempatBermain(),
       },
     );
   }

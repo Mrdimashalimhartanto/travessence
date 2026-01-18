@@ -9,6 +9,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/2012_Citilink_Logo.svg/1280px-2012_Citilink_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.709.661",
+    category: "Hotel",
   ),
   PromoModel(
     image:
@@ -19,6 +20,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Bisnis",
     price: "IDR 3.950.000",
+    category: "Pesawat",
   ),
   PromoModel(
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
@@ -28,6 +30,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.150.000",
+    category: "Villa & Apt",
   ),
   PromoModel(
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
@@ -37,6 +40,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.150.000",
+    category: "To Do",
   ),
   PromoModel(
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
@@ -46,6 +50,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.150.000",
+    category: "Kereta Api",
   ),
   PromoModel(
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
@@ -55,6 +60,7 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.150.000",
+    category: "Sewa Mobil",
   ),
   PromoModel(
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
@@ -64,5 +70,6 @@ final List<PromoModel> promoList = [
         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png",
     flightClass: "Ekonomi",
     price: "IDR 2.150.000",
+    category: "Jemputan Bandara",
   ),
 ];

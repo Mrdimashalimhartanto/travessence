@@ -9,11 +9,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   DateTime timeBackPressed = DateTime.now();
-
   int current = 0;
-
+  int selectedCategoryIndex = 0;
   List persons = [];
   List original = [];
+  List<PromoModel> get filteredPromo {
+    final selectedCategory = categoryItems[selectedCategoryIndex];
+
+    if (selectedCategory == "Semua") {
+      return promoList;
+    }
+
+    return promoList
+        .where((promo) => promo.category == selectedCategory)
+        .toList();
+  }
+
   TextEditingController txtQuery = new TextEditingController();
 
   void loadData() async {
@@ -23,6 +34,17 @@ class _HomePageState extends State<HomePage> {
     original = json;
     setState(() {});
   }
+
+  final List<String> categoryItems = const [
+    "Semua",
+    "Pesawat",
+    "Hotel",
+    "Villa & Apt",
+    "To Do",
+    "Kereta Api",
+    "Sewa Mobil",
+    "Jemputan Bandara",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                   'Yuk Cek promo harian untuk melihat rekomendasi wisata kamu',
                   style: GoogleFonts.poppins(
                     color: Colors.grey.shade800,
-                    fontSize: 12,
+                    fontSize: 10,
                     fontWeight: FontWeight.normal,
                   ),
                 ),
@@ -343,25 +365,45 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              TravessenceMenu(
-                title: "Akomodasi",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/9434/9434409.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/akomodasi');
+                },
+                child: TravessenceMenu(
+                  title: "Akomodasi",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/9434/9434409.png',
+                ),
               ),
-              TravessenceMenu(
-                title: "Atraksi",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/atraksi');
+                },
+                child: TravessenceMenu(
+                  title: "Atraksi",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
+                ),
               ),
-              TravessenceMenu(
-                title: "Villa & Apt",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/3033/3033267.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/villa_apt');
+                },
+                child: TravessenceMenu(
+                  title: "Villa & Apt",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/3033/3033267.png',
+                ),
               ),
-              TravessenceMenu(
-                title: "Event",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/2558/2558944.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/event');
+                },
+                child: TravessenceMenu(
+                  title: "Event",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/2558/2558944.png',
+                ),
               ),
             ],
           ),
@@ -369,20 +411,35 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              TravessenceMenu(
-                title: "Spa &\n Kecantikan",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/1329/1329088.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/spa-kecantikan');
+                },
+                child: TravessenceMenu(
+                  title: "Spa &\n Kecantikan",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/1329/1329088.png',
+                ),
               ),
-              TravessenceMenu(
-                title: "Sewa\nMobil",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/5044/5044511.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/sewa-mobil');
+                },
+                child: TravessenceMenu(
+                  title: "Sewa\nMobil",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/5044/5044511.png',
+                ),
               ),
-              TravessenceMenu(
-                title: "Tempat\nBermain",
-                image:
-                    'https://cdn-icons-png.flaticon.com/512/10155/10155168.png',
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/tempat_bermain');
+                },
+                child: TravessenceMenu(
+                  title: "Tempat\nBermain",
+                  image:
+                      'https://cdn-icons-png.flaticon.com/512/10155/10155168.png',
+                ),
               ),
               Column(
                 children: <Widget>[
@@ -410,8 +467,8 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     'More',
                     style: GoogleFonts.poppins(
-                      color: travessence,
-                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontWeight: FontWeight.normal,
                       fontSize: 12,
                     ),
                   ),
@@ -642,7 +699,7 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(height: 20),
                             kontentmember(),
                             Divider(
-                              thickness: 4,
+                              thickness: 1,
                               color: Color(0xffEFEFEF),
                               indent: 8,
                               endIndent: 8,
@@ -651,29 +708,56 @@ class _HomePageState extends State<HomePage> {
                             promotravessence(),
                             SizedBox(height: 20),
                             categories(
-                              items: const [
-                                "Semua",
-                                "Pesawat",
-                                "Hotel",
-                                "Villa & Apt",
-                                "To Do",
-                                "Kereta Api",
-                                "Sewa Mobil",
-                                "Jemputan Bandara",
-                              ],
-                              selectedIndex: 0,
-                              onTap: (_) {},
+                              items: categoryItems,
+                              selectedIndex: selectedCategoryIndex,
+                              onTap: (index) {
+                                setState(() {
+                                  selectedCategoryIndex = index;
+                                });
+                              },
                             ),
                             SizedBox(height: 10),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
-                                children: promoList.map((promo) {
-                                  return PromoCard(promo: promo);
-                                }).toList(),
+                                children: filteredPromo
+                                    .map((promo) => PromoCard(promo: promo))
+                                    .toList(),
                               ),
                             ),
                             buttonlihatpromo(),
+                            Divider(
+                              thickness: 4,
+                              color: Color(0xffEFEFEF),
+                              indent: 1,
+                              endIndent: 8,
+                            ),
+                            Column(
+                              children: [
+                                SectionHeader(
+                                  title: "Recommended Food For You",
+                                  subtitle:
+                                      "Enter your details below to create your account and get started",
+                                ),
+                                SizedBox(height: 10),
+                                RecommendedFoodSection(),
+                                SizedBox(height: 40),
+                                SectionHeader(
+                                  title: 'Destination Popular for you',
+                                  subtitle:
+                                      'Enter your details belom to create your account and get started',
+                                ),
+                                DestinationPopularSection(),
+                                SizedBox(height: 10),
+                                // SectionHeader(
+                                //   title:
+                                //       "Most popular destination in Indonesia",
+                                //   subtitle:
+                                //       "Enter your details below to create your account and get started",
+                                // ),
+                                // PopularDestinationGrid(),
+                              ],
+                            ),
                           ],
                         ),
                       ),

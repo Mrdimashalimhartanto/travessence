@@ -7,6 +7,7 @@ class PromoModel {
   final String airlineLogo;
   final String flightClass;
   final String price;
+  final String category;
 
   PromoModel({
     required this.image,
@@ -15,5 +16,6 @@ class PromoModel {
     required this.airlineLogo,
     required this.flightClass,
     required this.price,
+    required this.category,
   });
 }
