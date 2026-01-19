@@ -31,6 +31,8 @@ class _MyAppState extends State<MyApp> {
         '/spa-kecantikan': (context) => const SpaKecantikan(),
         '/sewa-mobil': (context) => const SewaMobil(),
         '/tempat_bermain': (context) => const TempatBermain(),
+
+        // Other Menu Pages
       },
     );
   }

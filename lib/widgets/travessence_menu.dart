@@ -5,7 +5,7 @@ class TravessenceMenu extends StatelessWidget {
     super.key,
     required this.title,
     required this.image,
-    this.size = 20.0,
+    this.size = 36.0,
   });
 
   final String title;
@@ -15,29 +15,26 @@ class TravessenceMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget>[
-        Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: travessence,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              height: 50,
-              width: 50,
-              child: Image(height: size, image: NetworkImage(image)),
-            ),
-          ],
-        ),
-        const SizedBox(height: 10),
-        Text(
-          title,
-          style: GoogleFonts.poppins(
-            color: Colors.black,
-            fontWeight: FontWeight.normal,
-            fontSize: 12,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: travessence,
+            borderRadius: BorderRadius.circular(10),
           ),
-          textAlign: TextAlign.center,
+          height: 50,
+          width: 50,
+          child: Center(child: Image.network(image, height: size)),
+        ),
+        const SizedBox(height: 8),
+        SizedBox(
+          height: 32, // 🔑 FIX sejajar
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            style: GoogleFonts.poppins(fontSize: 12, color: Colors.black),
+          ),
         ),
       ],
     );

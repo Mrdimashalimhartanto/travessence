@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage> {
   DateTime timeBackPressed = DateTime.now();
   int current = 0;
   int selectedCategoryIndex = 0;
+  // int selectedPesawatIndex = 0;
   List persons = [];
   List original = [];
   List<PromoModel> get filteredPromo {
@@ -361,14 +362,15 @@ class _HomePageState extends State<HomePage> {
     Widget menutravessence() {
       return Column(
         children: <Widget>[
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
+
+          /// ROW 1
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/akomodasi');
-                },
+                onTap: () => Navigator.pushNamed(context, '/akomodasi'),
                 child: TravessenceMenu(
                   title: "Akomodasi",
                   image:
@@ -376,9 +378,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/atraksi');
-                },
+                onTap: () => Navigator.pushNamed(context, '/atraksi'),
                 child: TravessenceMenu(
                   title: "Atraksi",
                   image:
@@ -386,9 +386,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/villa_apt');
-                },
+                onTap: () => Navigator.pushNamed(context, '/villa_apt'),
                 child: TravessenceMenu(
                   title: "Villa & Apt",
                   image:
@@ -396,9 +394,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/event');
-                },
+                onTap: () => Navigator.pushNamed(context, '/event'),
                 child: TravessenceMenu(
                   title: "Event",
                   image:
@@ -407,24 +403,24 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          SizedBox(height: 16),
+
+          const SizedBox(height: 16),
+
+          /// ROW 2
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/spa-kecantikan');
-                },
+                onTap: () => Navigator.pushNamed(context, '/spa-kecantikan'),
                 child: TravessenceMenu(
-                  title: "Spa &\n Kecantikan",
+                  title: "Spa &\nKecantikan",
                   image:
                       'https://cdn-icons-png.flaticon.com/512/1329/1329088.png',
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/sewa-mobil');
-                },
+                onTap: () => Navigator.pushNamed(context, '/sewa-mobil'),
                 child: TravessenceMenu(
                   title: "Sewa\nMobil",
                   image:
@@ -432,44 +428,39 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/tempat_bermain');
-                },
+                onTap: () => Navigator.pushNamed(context, '/tempat_bermain'),
                 child: TravessenceMenu(
                   title: "Tempat\nBermain",
                   image:
                       'https://cdn-icons-png.flaticon.com/512/10155/10155168.png',
                 ),
               ),
+
+              /// MORE
               Column(
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () {
-                      moremenu(context);
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: travessence,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      height: 50,
-                      width: 50,
-                      child: Image(
-                        height: 10,
-                        width: 10,
-                        image: NetworkImage(
-                          'https://cdn-icons-png.flaticon.com/512/10172/10172145.png',
-                        ),
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: travessence,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    height: 50,
+                    width: 50,
+                    child: Center(
+                      child: Image.network(
+                        'https://cdn-icons-png.flaticon.com/512/10172/10172145.png',
+                        height: 38,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 5),
-                  Text(
-                    'More',
-                    style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12,
+                  const SizedBox(height: 8),
+                  const SizedBox(
+                    height: 36, // 🔑 samain tinggi text
+                    child: Text(
+                      'More',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 12),
                     ),
                   ),
                 ],
@@ -749,13 +740,6 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 DestinationPopularSection(),
                                 SizedBox(height: 10),
-                                // SectionHeader(
-                                //   title:
-                                //       "Most popular destination in Indonesia",
-                                //   subtitle:
-                                //       "Enter your details below to create your account and get started",
-                                // ),
-                                // PopularDestinationGrid(),
                               ],
                             ),
                           ],
