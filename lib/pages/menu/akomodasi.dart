@@ -16,6 +16,7 @@ class _AkomodasiState extends State<Akomodasi> {
   String cabin = "Ekonomi";
   int selectedPesawatIndex = 0;
 
+  // LIST PESAWAT
   List<PesawatModel> get filteredPesawat {
     final selectedCategory = pesawatItems[selectedPesawatIndex];
 
@@ -41,6 +42,7 @@ class _AkomodasiState extends State<Akomodasi> {
     'Pelita Air',
     'Trigana Air',
   ];
+  // LIST PESAWAT
 
   String _formatDate(DateTime d) {
     const dayNames = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
@@ -278,12 +280,12 @@ class _AkomodasiState extends State<Akomodasi> {
                     },
                   ),
                   const SizedBox(height: 12),
-                  _horizontalFlightCards(),
+                  // _horizontalFlightCards(),
                   // SingleChildScrollView(
                   //   scrollDirection: Axis.horizontal,
                   //   child: Row(
                   //     children: filteredPesawat
-                  //         .map((pesawat) => PesawatCard(pesawat: pesawat))
+                  //         .map((pesawat) => PromoCard(promo: pesawat))
                   //         .toList(),
                   //   ),
                   // ),

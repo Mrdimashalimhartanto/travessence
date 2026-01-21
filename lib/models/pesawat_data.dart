@@ -11,6 +11,8 @@ final List<PesawatModel> pesawatData = [
     flightClass: 'Economy',
     price: 'IDR 1,500,000',
     category: 'Domestic',
+    airlineLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/2012_Citilink_Logo.svg/1280px-2012_Citilink_Logo.svg.png",
   ),
   PesawatModel(
     airline: 'Lion Air',
@@ -22,5 +24,7 @@ final List<PesawatModel> pesawatData = [
     flightClass: 'Business',
     price: 'IDR 2,000,000',
     category: 'Domestic',
+    airlineLogo:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/2012_Citilink_Logo.svg/1280px-2012_Citilink_Logo.svg.png",
   ),
 ];

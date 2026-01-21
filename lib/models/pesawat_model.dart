@@ -10,6 +10,7 @@ class PesawatModel {
   final String flightClass;
   final String price;
   final String category;
+  final String airlineLogo;
 
   PesawatModel({
     required this.airline,
@@ -21,5 +22,6 @@ class PesawatModel {
     required this.flightClass,
     required this.price,
     required this.category,
+    required this.airlineLogo,
   });
 }

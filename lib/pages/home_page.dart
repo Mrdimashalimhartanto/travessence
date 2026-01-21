@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
 
     Widget promotravessence() {
       return Padding(
-        padding: const EdgeInsets.only(left: 16, right: 16),
+        padding: const EdgeInsets.only(left: 8, right: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
