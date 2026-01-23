@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 part of 'pages.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   // int selectedPesawatIndex = 0;
   List persons = [];
   List original = [];
+
   List<PromoModel> get filteredPromo {
     final selectedCategory = categoryItems[selectedCategoryIndex];
 
@@ -437,33 +440,36 @@ class _HomePageState extends State<HomePage> {
               ),
 
               /// MORE
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: travessence,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    height: 50,
-                    width: 50,
-                    child: Center(
-                      child: Image.network(
-                        'https://cdn-icons-png.flaticon.com/512/10172/10172145.png',
-                        height: 38,
+              GestureDetector(
+                onTap: () => moremenu(context),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: travessence,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: Center(
+                        child: Image.network(
+                          'https://cdn-icons-png.flaticon.com/512/10172/10172145.png',
+                          height: 38,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  const SizedBox(
-                    height: 36, // 🔑 samain tinggi text
-                    child: Text(
-                      'More',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 12),
+                    const SizedBox(height: 8),
+                    const SizedBox(
+                      height: 36, // 🔑 samain tinggi text
+                      child: Text(
+                        'More',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 12),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
@@ -723,6 +729,7 @@ class _HomePageState extends State<HomePage> {
                               indent: 1,
                               endIndent: 8,
                             ),
+                            SizedBox(height: 20),
                             Column(
                               children: [
                                 SectionHeader(
@@ -738,6 +745,7 @@ class _HomePageState extends State<HomePage> {
                                   subtitle:
                                       'Enter your details belom to create your account and get started',
                                 ),
+                                SizedBox(height: 20),
                                 DestinationPopularSection(),
                                 SizedBox(height: 10),
                               ],

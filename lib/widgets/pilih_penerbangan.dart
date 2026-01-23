@@ -1,15 +1,14 @@
 part of 'widgets.dart';
 
-class PromoCard extends StatelessWidget {
-  // Ambil dari data model
-  final PromoModel promo;
-  const PromoCard({super.key, required this.promo});
+class PilihPenerbanganCard extends StatelessWidget {
+  final PilihPenerbanganModel penerbangan;
+  const PilihPenerbanganCard({super.key, required this.penerbangan});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-      height: 330,
+      height: 380,
       width: 190,
       decoration: BoxDecoration(
         color: travessence5,
@@ -28,7 +27,7 @@ class PromoCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
             child: Image.network(
-              promo.image,
+              penerbangan.image,
               height: 180,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -36,10 +35,10 @@ class PromoCard extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.fromLTRB(12, 10, 12, 0),
             child: Text(
-              promo.title,
-              maxLines: 2,
+              penerbangan.arrivalCity,
+              // maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: GoogleFonts.poppins(
                 color: travessence,
@@ -49,19 +48,42 @@ class PromoCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Text(promo.date, style: GoogleFonts.poppins(fontSize: 12)),
+            padding: EdgeInsets.fromLTRB(12, 6, 12, 0),
+            child: Text(
+              penerbangan.category,
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+                fontSize: 12,
+              ),
+            ),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(12, 6, 12, 0),
+          //   child: Text(
+          //     penerbangan.departureCity,
+          //     style: GoogleFonts.poppins(
+          //       fontSize: 11,
+          //       color: Colors.black54,
+          //       fontWeight: FontWeight.w500,
+          //     ),
+          //   ),
+          // ),
+          // SizedBox(height: 8),
+          // Padding(
+          //   padding: EdgeInsets.symmetric(horizontal: 8),
+          //   child: Text(penerbangan.departureCity),
+          // ),
           const SizedBox(height: 12),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Image.network(promo.airlineLogo, height: 12),
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: Image.network(penerbangan.airlineLogo, height: 18),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Text(
-              promo.flightClass,
+              penerbangan.flightClass,
               style: GoogleFonts.poppins(fontSize: 12),
             ),
           ),
@@ -69,7 +91,7 @@ class PromoCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Text(
-              promo.price.toUpperCase(),
+              penerbangan.price.toUpperCase(),
               style: GoogleFonts.poppins(
                 color: Colors.red,
                 fontWeight: FontWeight.bold,

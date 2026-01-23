@@ -17,32 +17,17 @@ class _AkomodasiState extends State<Akomodasi> {
   int selectedPesawatIndex = 0;
 
   // LIST PESAWAT
-  List<PesawatModel> get filteredPesawat {
-    final selectedCategory = pesawatItems[selectedPesawatIndex];
+  List<PilihPenerbanganModel> get filterPenerbangan {
+    final selectedPenerbangan = penerbanganList[selectedPesawatIndex];
 
-    if (selectedCategory == "Semua") {
-      return pesawatData;
+    if (selectedPenerbangan == "Sriwijaya Air") {
+      return pilihpenerbanganList;
     }
 
-    return pesawatData
-        .where((pesawat) => pesawat.category == selectedCategory)
+    return pilihpenerbanganList
+        .where((listPesawat) => listPesawat.category == selectedPenerbangan)
         .toList();
   }
-
-  final List<String> pesawatItems = const [
-    'Sriwijaya Air',
-    'Garuda Indonesia',
-    'AirAsia',
-    'Lion Air',
-    'Citilink',
-    'Batik Air',
-    'Nam Air',
-    'Wings Air',
-    'TransNusa',
-    'Pelita Air',
-    'Trigana Air',
-  ];
-  // LIST PESAWAT
 
   String _formatDate(DateTime d) {
     const dayNames = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
@@ -267,11 +252,11 @@ class _AkomodasiState extends State<Akomodasi> {
                   _searchCard(),
                   const SizedBox(height: 16),
                   _promoSection(),
-                  const SizedBox(height: 14),
+                  const SizedBox(height: 40),
                   _sectionTitle("Tiket pesawat mudik turun harga"),
                   const SizedBox(height: 10),
                   _airlineChips(
-                    items: pesawatItems,
+                    items: penerbanganList,
                     selectedIndex: selectedPesawatIndex,
                     onTap: (index) {
                       setState(() {
@@ -281,29 +266,49 @@ class _AkomodasiState extends State<Akomodasi> {
                   ),
                   const SizedBox(height: 12),
                   // _horizontalFlightCards(),
-                  // SingleChildScrollView(
-                  //   scrollDirection: Axis.horizontal,
-                  //   child: Row(
-                  //     children: filteredPesawat
-                  //         .map((pesawat) => PromoCard(promo: pesawat))
-                  //         .toList(),
-                  //   ),
-                  // ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: filterPenerbangan
+                          .map(
+                            (penerbangan) =>
+                                PilihPenerbanganCard(penerbangan: penerbangan),
+                          )
+                          .toList(),
+                    ),
+                  ),
                   const SizedBox(height: 18),
                   _sectionTitle("Tiket pesawat terbang ke luar negeri"),
                   const SizedBox(height: 10),
-                  _airlineChips(
-                    items: pesawatItems,
-                    selectedIndex: selectedPesawatIndex,
-                    onTap: (index) {
-                      setState(() {
-                        selectedPesawatIndex = index;
-                      });
-                    },
-                  ),
+                  // _airlineChips(
+                  //   items: penerbanganList,
+                  //   selectedIndex: selectedPesawatIndex,
+                  //   onTap: (index) {
+                  //     setState(() {
+                  //       selectedPesawatIndex = index;
+                  //     });
+                  //   },
+                  // ),
                   const SizedBox(height: 12),
                   _horizontalFlightCards(isInternational: true),
-                  const SizedBox(height: 18),
+                  const SizedBox(height: 20),
+                  _exploreTitle('Telusuri Yogyakarta lebih jauh lagi'),
+                  const SizedBox(height: 20),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: wisataList.map((wisata) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 16),
+                          child: WisataCard(wisata: wisata),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  RecommendedHotelSection(),
+
+                  const SizedBox(height: 16),
                   _paylaterBanner(),
                   const SizedBox(height: 16),
                   _articleSection(),
@@ -347,12 +352,57 @@ class _AkomodasiState extends State<Akomodasi> {
         Positioned(
           left: 16,
           bottom: 16,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Cek Akomodasi Terbaikmu",
+                style: GoogleFonts.poppins(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                "Pesawat, Hotel, Sewa Mobil, Cottage",
+                style: GoogleFonts.poppins(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.yellow,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _exploreTitle(String title) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Expanded(
           child: Text(
-            "Cek Akomodasi Terbaikmu",
+            title,
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          ),
+        ),
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF003580),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+          ),
+          child: Text(
+            'See all',
             style: GoogleFonts.poppins(
-              fontSize: 22,
-              fontWeight: FontWeight.w700,
               color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
             ),
           ),
         ),

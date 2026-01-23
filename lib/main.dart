@@ -32,7 +32,8 @@ class _MyAppState extends State<MyApp> {
         '/sewa-mobil': (context) => const SewaMobil(),
         '/tempat_bermain': (context) => const TempatBermain(),
 
-        // Other Menu Pages
+        // Menu Villa
+        // "/top-picks": (context) => const TopPicks(),
       },
     );
   }

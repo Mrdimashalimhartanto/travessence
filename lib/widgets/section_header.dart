@@ -41,7 +41,11 @@ class SectionHeader extends StatelessWidget {
             ),
             child: Text(
               "See all",
-              style: GoogleFonts.poppins(color: Colors.white, fontSize: 12),
+              style: GoogleFonts.poppins(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
