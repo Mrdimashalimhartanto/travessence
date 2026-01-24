@@ -33,26 +33,27 @@ class WelcomePage extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: travessence5,
       body: SafeArea(
         child: Column(
           children: [
-            // Header Image with text overlay
             Stack(
               children: [
                 Container(
                   width: size.width,
-                  height: 350,
+                  height: 380,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/stack_image.png'),
+                      image: NetworkImage(
+                        'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 Container(
                   width: size.width,
-                  height: 350,
+                  height: 380,
                   color: Colors.black.withOpacity(0.3), // overlay
                 ),
                 Positioned(

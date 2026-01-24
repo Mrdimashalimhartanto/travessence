@@ -439,3 +439,206 @@ final List<String> listVillaItems = const [
   'Lombok',
   'Klungkung',
 ];
+
+// Image list atraksi
+class AtraksiModel {
+  final String name;
+  final List<String> image;
+  final String icon;
+  final double rating;
+  final String location;
+  final String detailLocation;
+  final String price;
+
+  AtraksiModel({
+    required this.name,
+    required this.image,
+    required this.icon,
+    required this.rating,
+    required this.location,
+    required this.detailLocation,
+    required this.price,
+  });
+}
+
+final List<AtraksiModel> imageList = [
+  AtraksiModel(
+    name: 'Taman Safari Indonesia Bogor',
+    icon: 'assets/star_icon.png',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    rating: 4.9,
+    location: 'Cisarua, Bogor, Jawa Barat, Indonesia',
+    detailLocation: 'Cisarua, Bogor',
+    price: 'Rp. 185.000',
+  ),
+  AtraksiModel(
+    name: 'Taman Safari Indonesia Bogor',
+    icon: 'assets/star_icon.png',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    rating: 4.9,
+    location: 'Cisarua, Bogor, Jawa Barat, Indonesia',
+    detailLocation: 'Cisarua, Bogor',
+    price: 'Rp. 185.000',
+  ),
+  AtraksiModel(
+    name: 'Taman Safari Indonesia Bogor',
+    icon: 'assets/star_icon.png',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    rating: 4.9,
+    location: 'Cisarua, Bogor, Jawa Barat, Indonesia',
+    detailLocation: 'Cisarua, Bogor',
+    price: 'Rp. 185.000',
+  ),
+];
+
+// Event Model
+class EventModel {
+  final String name;
+  final List<String> image;
+  final String location;
+  final String detailLocation;
+  final String price;
+
+  EventModel({
+    required this.name,
+    required this.image,
+    required this.location,
+    required this.detailLocation,
+    required this.price,
+  });
+}
+
+final List<EventModel> imageListEvent = [
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+  EventModel(
+    name: 'daihatsu indonesia masters 2026',
+    image: [
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/55413734-d4f8-4870-885c-0c86d50114c0-1723625426450-41197da933adfefe2b411e9f1f021d52.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2021/04/20/2a9c9cdf-b875-4ac3-bf1a-aeca905bfa1c-1618885940624-1ff84641824c0cd5fa5c01f2fb96fb0c.jpg',
+      'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit1440960gsm/events/2024/08/14/87313d2d-4490-4e98-b949-ae1d2a233a0f-1723625436085-80db74e77d06823390848c01bce5c481.jpg',
+    ],
+    // rating: 4.9,
+    location: '25 Jan 2026',
+    detailLocation: 'Tanah Abang, Jakarta Pusat',
+    price: 'IDR 250.000',
+  ),
+];

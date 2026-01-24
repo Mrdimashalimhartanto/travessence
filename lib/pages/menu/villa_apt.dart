@@ -320,6 +320,150 @@ class _VillaAptState extends State<VillaApt> {
                   paylatterBanner(),
                   SizedBox(height: 20),
                   _articleSection(),
+                  SizedBox(height: 20),
+                  // Container(
+                  //   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                  //   height: 410,
+                  //   width: 190,
+                  //   decoration: BoxDecoration(
+                  //     color: travessence,
+                  //     borderRadius: BorderRadius.circular(10),
+                  //   ),
+                  //   child: Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: [
+                  //       ClipRRect(
+                  //         borderRadius: BorderRadius.only(
+                  //           topLeft: Radius.circular(10),
+                  //           topRight: Radius.circular(10),
+                  //         ),
+                  //         child: Container(
+                  //           height: 130,
+                  //           width: double.infinity,
+                  //           color: Colors.transparent,
+                  //           child: Image.network(
+                  //             'https://images.tokopedia.net/img/cache/900/VqbcmM/2022/9/1/3df76525-c05b-4019-998f-4e3b9d59f7fd.jpg',
+                  //             fit: BoxFit.cover,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 10),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(left: 8.0),
+                  //         child: Text(
+                  //           'PUMA Speedcat Pro Motorsport Shoes',
+                  //           style: GoogleFonts.poppins(
+                  //             color: travessence5,
+                  //             fontWeight: FontWeight.bold,
+                  //             fontSize: 14,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(left: 8.0),
+                  //         child: Text(
+                  //           'Rp 650.000',
+                  //           style: GoogleFonts.poppins(
+                  //             color: travessence5,
+                  //             fontWeight: FontWeight.bold,
+                  //             fontSize: 12,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.all(8.0),
+                  //         child: Row(
+                  //           children: [
+                  //             Container(
+                  //               decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(4),
+                  //                 color: Colors.red.shade400,
+                  //               ),
+                  //               child: Padding(
+                  //                 padding: const EdgeInsets.all(3.0),
+                  //                 child: const Text(
+                  //                   '5% Discount',
+                  //                   style: TextStyle(
+                  //                     fontSize: 8,
+                  //                     color: Colors.white,
+                  //                     fontWeight: FontWeight.bold,
+                  //                   ),
+                  //                 ),
+                  //               ),
+                  //             ),
+                  //             SizedBox(width: 5),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(left: 8.0),
+                  //         child: Image(
+                  //           image: AssetImage('assets/star_icon.png'),
+                  //           height: 10,
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(left: 8.0),
+                  //         child: Text(
+                  //           'this is a limited edition'.toLowerCase(),
+                  //           style: TextStyle(
+                  //             color: Colors.white,
+                  //             fontSize: 9,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(left: 8.0),
+                  //         child: Image(
+                  //           image: AssetImage('assets/logo_travenssence.png'),
+                  //           height: 40,
+                  //         ),
+                  //       ),
+                  //       SizedBox(height: 8),
+                  //       Padding(
+                  //         padding: const EdgeInsets.only(
+                  //           left: 15,
+                  //           right: 15,
+                  //           bottom: 15,
+                  //         ),
+                  //         child: Row(
+                  //           children: [
+                  //             Center(
+                  //               child: Container(
+                  //                 width: 150,
+                  //                 height: 45,
+                  //                 child: TextButton(
+                  //                   style: TextButton.styleFrom(
+                  //                     backgroundColor: Colors.green.shade900,
+                  //                     shape: RoundedRectangleBorder(
+                  //                       borderRadius: BorderRadius.circular(20),
+                  //                     ),
+                  //                   ),
+                  //                   onPressed: () {},
+                  //                   child: Text(
+                  //                     "Keranjang",
+                  //                     style: GoogleFonts.poppins(
+                  //                       color: Colors.white,
+                  //                       fontWeight: FontWeight.bold,
+                  //                       fontSize: 12,
+                  //                     ),
+                  //                   ),
+                  //                 ),
+                  //               ),
+                  //             ),
+                  //             SizedBox(width: 5),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   // _sectionTitle("Tiket pesawat mudik turun harga"),
                   // const SizedBox(height: 10),
                   // _airlineChips(
@@ -1326,7 +1470,7 @@ class _VillaAptState extends State<VillaApt> {
                 'Saat nya menginap di villa ramai ramai sampai diskon 50%, \nburuan lihat promo nya sekarang',
                 style: GoogleFonts.poppins(
                   color: Colors.grey.shade800,
-                  fontSize: 14,
+                  fontSize: 11,
                   fontWeight: FontWeight.normal,
                 ),
               ),

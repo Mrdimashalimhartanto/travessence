@@ -75,21 +75,21 @@ class VillaCard extends StatelessWidget {
           //   child: Text(villaapt.departureCity),
           // ),
           const SizedBox(height: 12),
-          // Padding(
-          //   padding: EdgeInsets.symmetric(horizontal: 8),
-          //   child: Image.network(villaapt.airlineLogo, height: 18),
-          // ),
-          // const SizedBox(height: 20),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-          //   child: Text(
-          //     villaapt.flightClass,
-          //     style: GoogleFonts.poppins(fontSize: 12),
-          //   ),
-          // ),
-          const SizedBox(height: 6),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: Image.asset('assets/logo_travenssence.png', height: 20),
+          ),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Text(
+              villaapt.location,
+              style: GoogleFonts.poppins(fontSize: 12),
+            ),
+          ),
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Text(
               villaapt.price.toUpperCase(),
               style: GoogleFonts.poppins(

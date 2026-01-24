@@ -32,16 +32,11 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: travessence,
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/logo_travenssence.png',
-              width: 300,
-              height: 300,
-            ),
-            const SizedBox(height: 30),
-          ],
+        child: Image.asset(
+          'assets/logo_travenssence.png',
+          width: 300,
+          height: 300,
+          fit: BoxFit.contain,
         ),
       ),
     );

@@ -15,6 +15,7 @@ class _AtraksiState extends State<Atraksi> {
   int passengers = 1;
   String cabin = "Ekonomi";
   int selectedPesawatIndex = 0;
+  int currentIndex = 0;
 
   List<PesawatModel> get filteredPesawat {
     final selectedCategory = pesawatItems[selectedPesawatIndex];
@@ -262,23 +263,32 @@ class _AtraksiState extends State<Atraksi> {
                 children: [
                   _priceGuaranteeBanner(),
                   const SizedBox(height: 12),
-                  _searchCard(),
-                  const SizedBox(height: 16),
+                  // _searchCard(),
+                  // const SizedBox(height: 16),
                   _promoSection(),
                   const SizedBox(height: 14),
-                  _sectionTitle("Tiket pesawat mudik turun harga"),
+                  _sectionTitle("Menampilkan 5195 hasil"),
                   const SizedBox(height: 10),
-                  _airlineChips(
-                    items: pesawatItems,
-                    selectedIndex: selectedPesawatIndex,
-                    onTap: (index) {
-                      setState(() {
-                        selectedPesawatIndex = index;
-                      });
-                    },
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: imageList.map((atraksi) {
+                        return AtraksiCard(atraksi: atraksi);
+                      }).toList(),
+                    ),
                   ),
-                  const SizedBox(height: 12),
-                  _horizontalFlightCards(),
+
+                  // _airlineChips(
+                  //   items: pesawatItems,
+                  //   selectedIndex: selectedPesawatIndex,
+                  //   onTap: (index) {
+                  //     setState(() {
+                  //       selectedPesawatIndex = index;
+                  //     });
+                  //   },
+                  // ),
+                  // const SizedBox(height: 12),
+                  // _horizontalFlightCards(),
                   // SingleChildScrollView(
                   //   scrollDirection: Axis.horizontal,
                   //   child: Row(
@@ -287,20 +297,20 @@ class _AtraksiState extends State<Atraksi> {
                   //         .toList(),
                   //   ),
                   // ),
-                  const SizedBox(height: 18),
-                  _sectionTitle("Tiket pesawat terbang ke luar negeri"),
-                  const SizedBox(height: 10),
-                  _airlineChips(
-                    items: pesawatItems,
-                    selectedIndex: selectedPesawatIndex,
-                    onTap: (index) {
-                      setState(() {
-                        selectedPesawatIndex = index;
-                      });
-                    },
-                  ),
-                  const SizedBox(height: 12),
-                  _horizontalFlightCards(isInternational: true),
+                  // const SizedBox(height: 18),
+                  // _sectionTitle("Tiket pesawat terbang ke luar negeri"),
+                  // const SizedBox(height: 10),
+                  // _airlineChips(
+                  //   items: pesawatItems,
+                  //   selectedIndex: selectedPesawatIndex,
+                  //   onTap: (index) {
+                  //     setState(() {
+                  //       selectedPesawatIndex = index;
+                  //     });
+                  //   },
+                  // ),
+                  // const SizedBox(height: 12),
+                  // _horizontalFlightCards(isInternational: true),
                   const SizedBox(height: 18),
                   _paylaterBanner(),
                   const SizedBox(height: 16),
@@ -345,13 +355,27 @@ class _AtraksiState extends State<Atraksi> {
         Positioned(
           left: 16,
           bottom: 16,
-          child: Text(
-            "Cek Atraksi Terbaikmu di Sini!",
-            style: GoogleFonts.poppins(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Cek Atraksi Terbaikmu di Sini!",
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              ),
+
+              Text(
+                'Atraksi seru menanti kamu, yuk cek keseruannya',
+                style: GoogleFonts.poppins(
+                  color: Colors.yellow,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ],
@@ -620,7 +644,7 @@ class _AtraksiState extends State<Atraksi> {
             const SizedBox(width: 10),
             Expanded(
               child: Text(
-                "Kuy, cek promo sebelum bepergian!",
+                "Kuy, penampilan atraksi menarik bro!",
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w600,
                   fontSize: 13,
