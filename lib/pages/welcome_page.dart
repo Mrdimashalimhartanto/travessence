@@ -33,7 +33,7 @@ class WelcomePage extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: travessence5,
+      backgroundColor: MyColor.travessence,
       body: SafeArea(
         child: Column(
           children: [

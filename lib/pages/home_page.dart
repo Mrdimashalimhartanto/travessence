@@ -86,11 +86,11 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 8),
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      backgroundColor: travessence,
+                      backgroundColor: MyColor.travessence,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(17),
                       ),
-                      side: BorderSide(color: travessence4),
+                      side: BorderSide(color: MyColor.travessence4),
                     ),
                     onPressed: () {},
                     child: Text(
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               'Layanan Teratas',
               style: GoogleFonts.poppins(
-                color: travessence,
+                color: MyColor.travessence,
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
               ),
@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: travessence,
+                        color: MyColor.travessence,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       height: 50,
@@ -189,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                       'Pesawat',
                       style: GoogleFonts.poppins(
                         fontSize: 12,
-                        color: travessence,
+                        color: MyColor.travessence,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: travessence,
+                        color: MyColor.travessence,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       height: 50,
@@ -212,7 +212,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       'Hotel',
                       style: GoogleFonts.poppins(
-                        color: travessence,
+                        color: MyColor.travessence,
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -225,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () => print('GoFood'),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: travessence,
+                          color: MyColor.travessence,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
@@ -239,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       'To Do',
                       style: GoogleFonts.poppins(
-                        color: travessence,
+                        color: MyColor.travessence,
                         fontWeight: FontWeight.w500,
                         fontSize: 12,
                       ),
@@ -252,7 +252,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () => print('GoSend'),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: travessence,
+                          color: MyColor.travessence,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
@@ -266,7 +266,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       'Kereta Api',
                       style: GoogleFonts.poppins(
-                        color: travessence,
+                        color: MyColor.travessence,
                         fontWeight: FontWeight.bold,
                         fontSize: 12,
                       ),
@@ -447,7 +447,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: travessence,
+                        color: MyColor.travessence,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       height: 50,
@@ -497,7 +497,7 @@ class _HomePageState extends State<HomePage> {
             height: 40,
             margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             decoration: BoxDecoration(
-              color: travessence,
+              color: MyColor.travessence,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Row(
@@ -768,7 +768,7 @@ class _HomePageState extends State<HomePage> {
                         toastLength: Toast.LENGTH_SHORT,
                         gravity: ToastGravity.TOP,
                         timeInSecForIosWeb: 1,
-                        backgroundColor: travessence,
+                        backgroundColor: MyColor.travessence,
                         textColor: Colors.white,
                         fontSize: 16.0,
                       );

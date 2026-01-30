@@ -16,7 +16,7 @@ class MenuVilla extends StatelessWidget {
           height: 56,
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: travessence,
+            color: MyColor.travessence,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Image.network(image),

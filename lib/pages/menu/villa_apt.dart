@@ -326,7 +326,7 @@ class _VillaAptState extends State<VillaApt> {
                   //   height: 410,
                   //   width: 190,
                   //   decoration: BoxDecoration(
-                  //     color: travessence,
+                  //     color: MyColor.travessence,
                   //     borderRadius: BorderRadius.circular(10),
                   //   ),
                   //   child: Column(
@@ -353,7 +353,7 @@ class _VillaAptState extends State<VillaApt> {
                   //         child: Text(
                   //           'PUMA Speedcat Pro Motorsport Shoes',
                   //           style: GoogleFonts.poppins(
-                  //             color: travessence5,
+                  //             color: MyColor.travessence5,
                   //             fontWeight: FontWeight.bold,
                   //             fontSize: 14,
                   //           ),
@@ -365,7 +365,7 @@ class _VillaAptState extends State<VillaApt> {
                   //         child: Text(
                   //           'Rp 650.000',
                   //           style: GoogleFonts.poppins(
-                  //             color: travessence5,
+                  //             color: MyColor.travessence5,
                   //             fontWeight: FontWeight.bold,
                   //             fontSize: 12,
                   //           ),
@@ -624,7 +624,7 @@ class _VillaAptState extends State<VillaApt> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: travessence,
+        color: MyColor.travessence,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
@@ -926,7 +926,7 @@ class _VillaAptState extends State<VillaApt> {
           height: 42,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: travessence,
+              backgroundColor: MyColor.travessence,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -1376,7 +1376,11 @@ class _VillaAptState extends State<VillaApt> {
                 color: Color(0xFFEFF6FF),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Icon(Icons.discount_rounded, size: 18, color: travessence),
+              child: Icon(
+                Icons.discount_rounded,
+                size: 18,
+                color: MyColor.travessence,
+              ),
             ),
             SizedBox(width: 10),
             Expanded(

@@ -65,7 +65,7 @@ class Event extends StatelessWidget {
       return Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: travessence,
+          color: MyColor.travessence,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -98,7 +98,7 @@ class Event extends StatelessWidget {
                     height: 42,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: travessence3,
+                        backgroundColor: MyColor.travessence3,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -109,7 +109,7 @@ class Event extends StatelessWidget {
                         "Log in",
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
-                          color: travessence,
+                          color: MyColor.travessence,
                           fontSize: 19,
                         ),
                       ),
@@ -136,7 +136,7 @@ class Event extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: travessence5,
+      backgroundColor: MyColor.travessence5,
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: heroHeader()),

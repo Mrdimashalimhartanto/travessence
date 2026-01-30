@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-Color travessence = const Color(0xff023770);
-Color greytravessence = const Color(0xffCECECE);
-Color greentravessence = const Color(0xff006563);
-Color sagetravessence = const Color(0xff99C1C1);
-Color travessence2 = const Color(0xff023770);
-Color travessence3 = const Color(0xffa3cfff);
-Color travessence4 = const Color(0xff007CFF);
-Color travessence5 = const Color(0xffFFFFFF);
-
-double defaultMargin = 30.0;
+class MyColor {
+  static Color travessence = const Color(0xff023770);
+  static Color greytravessence = const Color(0xFF919090);
+  static Color greentravessence = const Color(0xff006563);
+  static Color sagetravessence = const Color(0xff99C1C1);
+  static Color travessence2 = const Color(0xff023770);
+  static Color travessence3 = const Color(0xffa3cfff);
+  static Color travessence4 = const Color(0xff007CFF);
+  static Color travessence5 = const Color(0xffFFFFFF);
+  static Color blacktravessence = const Color(0xFF000000);
+  // double defaultMargin = 30.0;
+}

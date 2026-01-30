@@ -12,7 +12,7 @@ class PromoCard extends StatelessWidget {
       height: 330,
       width: 190,
       decoration: BoxDecoration(
-        color: travessence5,
+        color: MyColor.travessence5,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
@@ -42,7 +42,7 @@ class PromoCard extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: GoogleFonts.poppins(
-                color: travessence,
+                color: MyColor.travessence,
                 fontWeight: FontWeight.bold,
                 fontSize: 14,
               ),

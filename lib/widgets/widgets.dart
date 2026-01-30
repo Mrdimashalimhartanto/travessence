@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:travessence/models/models.dart';
 import 'package:travessence/utils/theme.dart';
 
-part 'travessence_menu.dart';
+import '../modules/home/model/detail_promo.dart' hide PromoModel;
+
 part 'promo_card.dart';
 part 'recommended_food.dart';
 part 'section_header.dart';
@@ -19,3 +20,4 @@ part 'menu_villa.dart';
 part 'villa_card.dart';
 part 'atraksi_card.dart';
 part 'event_card.dart';
+part 'travessence_menu.dart';

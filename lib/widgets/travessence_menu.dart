@@ -19,7 +19,7 @@ class TravessenceMenu extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            color: travessence,
+            color: MyColor.travessence,
             borderRadius: BorderRadius.circular(10),
           ),
           height: 50,

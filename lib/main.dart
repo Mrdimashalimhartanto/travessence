@@ -1,40 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:travessence/pages/menu/menu.dart';
-import 'package:travessence/pages/pages.dart';
+import 'package:get/get.dart';
 
-void main() {
+import 'package:travessence/config/config.dart';
+import 'package:travessence/loading/loading_screen_new.dart';
+import 'package:travessence/routes/app_pages.dart';
+import 'package:travessence/utils/dismisskeyboard.dart';
+import 'package:travessence/utils/theme.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Config.load();
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        "/": (context) => const SplashPage(),
-        "/welcome-page": (context) => const WelcomePage(),
-        "/main-page": (context) => const MainPage(),
+    return DismissKeyboard(
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Travessence',
+        theme: ThemeData(
+          useMaterial3: false,
+          primaryColor: MyColor.travessence,
+          focusColor: MyColor.travessence5,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          inputDecorationTheme: InputDecorationTheme(
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: MyColor.travessence),
+            ),
+          ),
+          primaryIconTheme: IconThemeData(color: MyColor.travessence),
+        ),
 
-        // Menu Pages
-        '/akomodasi': (context) => const Akomodasi(),
-        '/atraksi': (context) => const Atraksi(),
-        '/villa_apt': (context) => const VillaApt(),
-        '/event': (context) => const Event(),
-        '/spa-kecantikan': (context) => const SpaKecantikan(),
-        '/sewa-mobil': (context) => const SewaMobil(),
-        '/tempat_bermain': (context) => const TempatBermain(),
-
-        // Menu Villa
-        // "/top-picks": (context) => const TopPicks(),
-      },
+        // 👇 selalu masuk splash dulu
+        home: const SplashScreenNew(),
+        getPages: AppPages.routes,
+      ),
     );
   }
 }

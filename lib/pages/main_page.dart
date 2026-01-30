@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
         onPressed: () {
           Navigator.pushNamed(context, '/cart-page');
         },
-        backgroundColor: greentravessence,
+        backgroundColor: MyColor.travessence,
         shape: const CircleBorder(),
         child: Image.asset("assets/icon_cart.png", width: 20),
       );
@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage> {
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         clipBehavior: Clip.antiAlias,
-        color: travessence,
+        color: MyColor.travessence,
         elevation: 0,
         child: BottomNavigationBar(
           iconSize: 22,
@@ -58,8 +58,8 @@ class _MainPageState extends State<MainPage> {
                       "assets/icon_home.png",
                       width: 20,
                       color: _selectedIndex == 0
-                          ? greentravessence
-                          : travessence5,
+                          ? MyColor.travessence
+                          : MyColor.travessence5,
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -67,8 +67,8 @@ class _MainPageState extends State<MainPage> {
                       style: TextStyle(
                         fontSize: 12,
                         color: _selectedIndex == 0
-                            ? greentravessence
-                            : travessence5,
+                            ? MyColor.travessence
+                            : MyColor.travessence5,
                       ),
                     ),
                   ],
@@ -86,8 +86,8 @@ class _MainPageState extends State<MainPage> {
                       "assets/icon_chat.png",
                       width: 20,
                       color: _selectedIndex == 1
-                          ? greentravessence
-                          : travessence5,
+                          ? MyColor.travessence
+                          : MyColor.travessence5,
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -95,8 +95,8 @@ class _MainPageState extends State<MainPage> {
                       style: TextStyle(
                         fontSize: 12,
                         color: _selectedIndex == 1
-                            ? greentravessence
-                            : travessence5,
+                            ? MyColor.travessence
+                            : MyColor.travessence5,
                       ),
                     ),
                   ],
@@ -114,8 +114,8 @@ class _MainPageState extends State<MainPage> {
                       "assets/icon_wishlist.png",
                       width: 20,
                       color: _selectedIndex == 2
-                          ? greentravessence
-                          : travessence5,
+                          ? MyColor.travessence
+                          : MyColor.travessence5,
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -123,8 +123,8 @@ class _MainPageState extends State<MainPage> {
                       style: TextStyle(
                         fontSize: 12,
                         color: _selectedIndex == 2
-                            ? greentravessence
-                            : travessence5,
+                            ? MyColor.travessence
+                            : MyColor.travessence5,
                       ),
                     ),
                   ],
@@ -142,8 +142,8 @@ class _MainPageState extends State<MainPage> {
                       "assets/icon_profile.png",
                       width: 20,
                       color: _selectedIndex == 3
-                          ? greentravessence
-                          : travessence5,
+                          ? MyColor.travessence
+                          : MyColor.travessence5,
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -151,8 +151,8 @@ class _MainPageState extends State<MainPage> {
                       style: TextStyle(
                         fontSize: 12,
                         color: _selectedIndex == 3
-                            ? greentravessence
-                            : travessence5,
+                            ? MyColor.travessence
+                            : MyColor.travessence5,
                       ),
                     ),
                   ],

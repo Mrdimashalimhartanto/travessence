@@ -414,38 +414,33 @@ class _AkomodasiState extends State<Akomodasi> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFF3A7BFF).withOpacity(0.85),
+        color: const Color(0xffF82A46),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 28,
-            height: 28,
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Icon(
-              Icons.workspace_premium,
-              color: Colors.white,
-              size: 18,
+          SizedBox(
+            width: 30,
+            height: 30,
+            child: Image(
+              image: AssetImage('assets/logo_plife.png'),
+              width: 20,
+              height: 20,
             ),
           ),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
-              "Jaminan Harga Termurah! Ada tiket domestik yang lebih murah? Klaim 2x selisih harganya!",
-              style: GoogleFonts.poppins(
-                fontSize: 12,
+              'PT Perta Life Insurance berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK)',
+              style: GoogleFonts.montserrat(
                 color: Colors.white,
-                fontWeight: FontWeight.w500,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
           const SizedBox(width: 6),
-          const Icon(Icons.chevron_right, color: Colors.white),
         ],
       ),
     );
@@ -710,7 +705,7 @@ class _AkomodasiState extends State<Akomodasi> {
           height: 42,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: travessence,
+              backgroundColor: MyColor.travessence,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),

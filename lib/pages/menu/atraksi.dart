@@ -386,7 +386,7 @@ class _AtraksiState extends State<Atraksi> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: travessence,
+        color: MyColor.travessence,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
@@ -682,7 +682,7 @@ class _AtraksiState extends State<Atraksi> {
           height: 42,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: travessence,
+              backgroundColor: MyColor.travessence,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
